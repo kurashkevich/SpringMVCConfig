@@ -14,4 +14,9 @@ public class FirstController   {
     public String helloWorld() {
         return "welcome";
     }
+
+    @GetMapping("/welcome/second")
+    public String secondPage() {
+        return "second";
+    }
 }
