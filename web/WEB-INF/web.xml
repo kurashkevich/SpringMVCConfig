@@ -19,6 +19,7 @@
         <load-on-startup>1</load-on-startup>
     </servlet>
 
+    <!-- <url-pattern>/</url-pattern> : Означает что абсолютно все запросы будут проходить через Dispatcher Servlet-->
     <servlet-mapping>
         <servlet-name>dispatcher</servlet-name>
         <url-pattern>/</url-pattern>
