@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://www.springframework.org/tags" %>
 <%--
   Created by IntelliJ IDEA.
   User: Vladislav_K
@@ -9,9 +10,9 @@
 <html>
 <head>
     <title>Title</title>
-    ${msg}
+    <link href="<c:url value="/resources/css/main.css" />" rel="stylesheet">
 </head>
 <body>
-
+    <h1>${msg}</h1>
 </body>
 </html>
