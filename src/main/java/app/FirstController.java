@@ -13,7 +13,7 @@ import java.util.Map;
 public class FirstController {
     @GetMapping("/welcome") public String helloWorld(Model model) {
         model.addAttribute("msg", "hello model");
-        return "welcome";
+        return "index";
     }
 
 }

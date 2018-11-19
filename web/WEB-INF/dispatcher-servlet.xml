@@ -10,6 +10,7 @@
                            http://www.springframework.org/schema/context
                            http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 
+    <!-- Указывает где находяться статичные ресурсы-->
     <mvc:resources mapping="/resources/**" location="resources"/>
     <!-- Handler Mapper маппит по URL, которые описаны в контроллерах @GetMapping("/welcome")-->
     <mvc:default-servlet-handler/>
@@ -17,10 +18,12 @@
     <!-- Показывает где искать компоненты(контроллеры)-->
     <context:component-scan base-package="app"/>
 
+
+    <!-- viewResolver ищет представления в указанной папке-->
     <bean   id="viewResolver"
             class="org.springframework.web.servlet.view.InternalResourceViewResolver"
             p:prefix="/WEB-INF/view/"
-            p:suffix=".xhtml">
+            p:suffix=".jsp">
     </bean>
 
 </beans>

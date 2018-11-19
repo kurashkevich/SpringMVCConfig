@@ -20,3 +20,8 @@ web.xml
 
     https://www.youtube.com/watch?v=CKR4pmXntjw
 
+
+
+    Вводный курс в Log4j
+    https://dzone.com/tutorials/java/log4j/log4j-configuration.html
+
