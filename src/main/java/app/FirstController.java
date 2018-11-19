@@ -10,15 +10,10 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Controller
-public class FirstController   {
-    @GetMapping("/welcome")
-    public String helloWorld(Model model) {
+public class FirstController {
+    @GetMapping("/welcome") public String helloWorld(Model model) {
         model.addAttribute("msg", "hello model");
-        return "index";
+        return "welcome";
     }
 
-    @GetMapping("/welcome/second")
-    public String secondPage() {
-        return "second";
-    }
 }
