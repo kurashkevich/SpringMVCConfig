@@ -10,7 +10,9 @@
 <html>
 <head>
     <title>Title</title>
-    <link href="<c:url value="/resources/css/main.css" />" rel="stylesheet">
+    <style>
+        <%@include file="/resources/css/main.css"%>
+    </style>
 </head>
 <body>
     <h1>${msg}</h1>
