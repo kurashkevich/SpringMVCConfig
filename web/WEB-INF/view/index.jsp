@@ -16,5 +16,9 @@
 </head>
 <body>
     <h1>${msg}</h1>
+    <p>Для продолжения работы Вам необходимо пройти регистрацию или войти</p>
+    <a href="/registration/newUser">Registration</a>
+    <p></p>
+    <a href="/registration">sign in</a>
 </body>
 </html>
