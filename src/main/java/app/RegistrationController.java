@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+
+// аннотация RequestMapping используется HandlerMapping-ом
 @Controller
 @RequestMapping("/registration")
 public class RegistrationController {

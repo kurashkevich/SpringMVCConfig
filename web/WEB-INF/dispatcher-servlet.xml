@@ -20,6 +20,8 @@
 
 
     <!-- viewResolver ищет представления в указанной папке-->
+    <!-- Internal view Resolver - получает страницы из внутреннего каталога WEB-INF (специальный каталог, не имеющий
+    свободного доступа к своим ресурсам, напряму из браузерной строки)-->
     <bean   id="viewResolver"
             class="org.springframework.web.servlet.view.InternalResourceViewResolver"
             p:prefix="/WEB-INF/view/"
