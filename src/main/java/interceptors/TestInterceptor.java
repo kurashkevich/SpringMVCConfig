@@ -26,7 +26,7 @@ public class TestInterceptor extends HandlerInterceptorAdapter {
     @Override public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler,
         Exception ex) throws Exception {
        if(request.getRequestURI().contains("/check-user")){
-           System.out.println("afterCompletion");
+           ///System.out.println("afterCompletion");
        }
     }
 
@@ -38,7 +38,7 @@ public class TestInterceptor extends HandlerInterceptorAdapter {
         throws Exception {
         System.out.println(request.getRequestURI());
         if(request.getRequestURI().contains("/check-user")){
-            System.out.println("pre Handle:");
+           //System.out.println("pre Handle:");
         }
         return super.preHandle(request, response, handler);
     }
@@ -47,7 +47,7 @@ public class TestInterceptor extends HandlerInterceptorAdapter {
         ModelAndView modelAndView) throws Exception {
         if(request.getRequestURI().contains("/check-user")){
             User user = (User) modelAndView.getModel().get("user");
-            System.out.println("post Handle:" + user.getEmail());
+            //System.out.println("post Handle:" + user.getEmail());
         }
     }
 }

@@ -10,6 +10,9 @@
 <html>
 <head>
     <title>Registration</title>
+    <style>
+        <%@include file="/resources/css/main.css"%>
+    </style>
 </head>
 <body>
 
@@ -20,17 +23,19 @@
 -->
 <form:form method="POST" action="check-user"
            modelAttribute="user">
-    <form:label path="email">email</form:label>
-    <form:input path="email" />
+    <div><form:label path="email">email</form:label></div>
+    <div><form:input path="email"/></div>
+    <div><form:label path="pass">pass</form:label></div>
+    <div><form:input path="pass"/></div>
+    <div><form:errors path="pass" class="error"/></div>
 
-    <form:label path="pass">pass</form:label>
-    <form:input path="pass" />
-
-    <input type="submit" value="Submit" />
+    <div>
+        <input type="submit" value="Submit"/>
+    </div>
 </form:form>
 
 <a href="/welcome">back</a>
-<p></p>
+<p>asdad</p>
 
 </body>
 </html>

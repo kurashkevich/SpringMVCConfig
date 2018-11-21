@@ -12,5 +12,6 @@
 </head>
 <body>
     ${user.email}
+<a href="/welcome">home</a>
 </body>
 </html>

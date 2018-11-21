@@ -1,7 +1,11 @@
 package model;
 
+import javax.validation.constraints.Size;
+
 public class User {
     private String email;
+
+    @Size(min = 5, message = "Пароль должен быть минимум 5 символов")
     private String pass;
 
     public User() {
