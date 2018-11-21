@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class TestRestController {
 
-    @RequestMapping("/greeting")
+    @RequestMapping(value = "/greeting")
     public User greeting(@RequestParam(value="email", defaultValue="v.kur@gmail.com") String email) {
         User user = new User(email, "asd");
         System.out.println(user);
