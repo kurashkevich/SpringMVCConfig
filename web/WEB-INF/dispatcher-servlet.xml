@@ -36,7 +36,6 @@
         </mvc:interceptor>
     </mvc:interceptors>
 
-
     <!-- пример из доков спринг-->
      <!--<mvc:interceptors>
         <bean class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor"/>
@@ -50,5 +49,7 @@
             <bean class="org.example.SecurityInterceptor"/>
         </mvc:interceptor>
     </mvc:interceptors>-->
+
+
 
 </beans>

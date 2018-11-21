@@ -1,11 +1,17 @@
 package model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import javax.validation.constraints.Size;
+import java.io.Serializable;
 
-public class User {
+@Entity
+public class User implements Serializable{
+    @Id
+    @GeneratedValue
+    private Long id;
     private String email;
-
-    @Size(min = 5, message = "Пароль должен быть минимум 5 символов")
     private String pass;
 
     public User() {
@@ -14,6 +20,14 @@ public class User {
     public User(String email, String pass) {
         this.email = email;
         this.pass = pass;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getEmail() {
