@@ -27,10 +27,11 @@
             p:prefix="/WEB-INF/view/"
             p:suffix=".jsp">
     </bean>
-    
+
+    <!-- Инициализация interceptor -->
     <mvc:interceptors>
         <mvc:interceptor>
-            <mvc:mapping path="/*"/>
+            <mvc:mapping path="/registration/check-user"/>
             <bean class="interceptors.TestInterceptor"/>
         </mvc:interceptor>
     </mvc:interceptors>
