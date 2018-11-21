@@ -7,7 +7,21 @@ import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-
+/**
+ *
+ * Интерсепторы используются, для перехвата, обработки и изменения.
+ *
+ * PreHandle - обработка до отработки контроллера
+ * PostHndle - обработка после обработки контроллера
+ * afterCompletion - обработка после обработки контроллера и после того как уже сформирована вьюха
+ *
+ * Отличия от фильтров:
+ * 1. Возможность работать напрямую с объектами(моделями). С помощью фильтра такая реализация сложнее
+ * 2. Доступ к контроллерам
+ *
+ * https://docs.spring.io/spring/docs/current/spring-framework-reference/web.html#mvc-config-interceptors
+ *
+ * **/
 public class TestInterceptor extends HandlerInterceptorAdapter {
     @Override public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler,
         Exception ex) throws Exception {
@@ -32,7 +46,8 @@ public class TestInterceptor extends HandlerInterceptorAdapter {
     @Override public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler,
         ModelAndView modelAndView) throws Exception {
         if(request.getRequestURI().contains("/check-user")){
-            System.out.println("post Handle:");
+            User user = (User) modelAndView.getModel().get("user");
+            System.out.println("post Handle:" + user.getEmail());
         }
     }
 }
