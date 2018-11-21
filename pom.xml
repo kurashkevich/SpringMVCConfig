@@ -68,6 +68,14 @@
         </dependency>
 
 
+        <!--библиотека, которая позволяет делать из строки JSON объект, и наоборот -->
+        <dependency>
+            <groupId>org.codehaus.jackson</groupId>
+            <artifactId>jackson-mapper-asl</artifactId>
+            <version>1.9.13</version>
+        </dependency>
+
+
 
         <!-- https://mvnrepository.com/artifact/javax.faces/jsf-api -->
 
